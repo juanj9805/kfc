@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
         <div class="row">
-            <form class="col-6 offset-3" action="">
-                <label for="">Email</label>
-                <input type="text" id="email">
-                <label for="">Password</label>
-                <input type="text" id="password">
-                <button class="btn btn-primary" id="sendButton">Send</button>
+            <form class="col-6 offset-3 shadow rounded" action="">
+                <img src="assets/Logo.png" class="img-fluid" alt="">
+                <label class="form-label" for="">Email</label>
+                <input class="form-control" type="text" id="email">
+                <label class="form-label" for="">Password</label>
+                <input class="form-control" type="text" id="password">
+                <button class="btn btn-danger container-fluid  my-3" id="sendButton">Send</button>
             </form>
         </div>
     </div>

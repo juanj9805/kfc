@@ -1,6 +1,7 @@
 const inputEmail = document.querySelector("#email")
 const inputPassword = document.querySelector("#password")
 const buttonSend = document.querySelector("#sendButton")
+const buttonTheme = document.querySelector("#theme")
 const darkTheme = document.querySelector("#darkTheme")
 const lightTheme = document.querySelector("#lightTheme")
 
@@ -13,21 +14,17 @@ const login = function() {
         if(inputEmail.value == authEmail && inputPassword.value == authPassword){
             sessionStorage.setItem("isLogged","yes")
             window.location.replace("index.html")
-            alert("ok")
-        }else{alert("bad")}
+        }
     })
 }
+
+login()
 
 const changeTheme = function() {
-    darkTheme.addEventListener("click", ()=> {
+    buttonTheme.addEventListener("click", ()=> {
         document.querySelector("body").classList.add("dark")
-    })
-    lightTheme.addEventListener("click", ()=> {
-        document.querySelector("body").classList.remove("dark")
+        document.querySelector("body").classList.remove("light")
     })
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    login()
-    changeTheme()
-})
+changeTheme()
